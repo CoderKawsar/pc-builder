@@ -49,9 +49,7 @@ const FeaturedCategories = () => {
                       <Image
                         src={category.image}
                         alt={category.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-md"
+                        className="h-full w-full rounded-md object-cover"
                       />
                     </div>
                   </div>
@@ -75,8 +73,8 @@ const FeaturedCategories = () => {
                   <Image
                     src={categories[6].image}
                     alt={categories[6].title}
-                    layout="fill"
-                    objectFit="cover"
+                    // layout="fill"
+                    // objectFit="cover"
                     className="rounded-md"
                   />
                 </div>
