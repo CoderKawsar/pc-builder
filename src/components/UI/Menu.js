@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Menu() {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-gray-200 h-20 fixed top-0">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,49 +29,84 @@ function Menu() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <Link href="/pc-builder">PC Builder</Link>
             </li>
             <li>
-              <a>Parent</a>
+              <a>Categories</a>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link href="/categories/cpu">CPU / Processor</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link href="/categories/motherboard">Motherboard</Link>
+                </li>
+                <li>
+                  <Link href="/categories/ram">RAM</Link>
+                </li>
+                <li>
+                  <Link href="/categories/power-supply">Power Supply Unit</Link>
+                </li>
+                <li>
+                  <Link href="/categories/storage-device">Storage Device</Link>
+                </li>
+                <li>
+                  <Link href="/categories/monitor">Monitor</Link>
+                </li>
+                <li>
+                  <Link href="/categories/others">Others</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link href="/login">Login</Link>
+            </li>
+            <li>
+              <Link href="/logout">Logout</Link>
             </li>
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost normal-case text-xl">
           <Image src={logo} width={40} height={40} alt="PC BUILDER" />
-          PC Builder
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <Link href="/pc-builder">PC Builder</Link>
           </li>
           <li tabIndex={0}>
             <details>
-              <summary>Parent</summary>
+              <summary>Categories</summary>
               <ul className="p-2">
                 <li>
-                  <a>Submenu 1</a>
+                  <Link href="/categories/cpu">CPU / Processor</Link>
                 </li>
                 <li>
-                  <a>Submenu 2</a>
+                  <Link href="/categories/motherboard">Motherboard</Link>
+                </li>
+                <li>
+                  <Link href="/categories/ram">RAM</Link>
+                </li>
+                <li>
+                  <Link href="/categories/power-supply">Power Supply Unit</Link>
+                </li>
+                <li>
+                  <Link href="/categories/storage-device">Storage Device</Link>
+                </li>
+                <li>
+                  <Link href="/categories/monitor">Monitor</Link>
+                </li>
+                <li>
+                  <Link href="/categories/others">Others</Link>
                 </li>
               </ul>
             </details>
           </li>
           <li>
-            <a>Item 3</a>
+            <Link href="/login">Login</Link>
+          </li>
+          <li>
+            <Link href="/logout">Logout</Link>
           </li>
         </ul>
       </div>
