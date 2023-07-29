@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link href={`/products/${_id}`}>
-      <div className="bg-white shadow-md rounded-lg p-4">
+      <div className="bg-white shadow-md rounded-lg p-4 hover:shadow-xl">
         <img
           src={image}
           alt={productName}

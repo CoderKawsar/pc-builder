@@ -1,3 +1,4 @@
+import FeaturedCategories from "@/components/UI/FeaturedCategories";
 import Products from "@/components/UI/Products";
 import Head from "next/head";
 
@@ -8,10 +9,24 @@ export default function Home({ featuredProducts }) {
         <title>PC Builder - Home</title>
       </Head>
       <div>
-        <h2 className="text-center text-4xl uppercase pt-20">
-          Featured Products
-        </h2>
-        <Products products={featuredProducts} />
+        {/* ======================
+        Featured products 
+        =======================*/}
+        <div>
+          <h2 className="text-center text-4xl uppercase mb-12 pt-32">
+            Featured Products
+          </h2>
+          <Products products={featuredProducts} />
+        </div>
+        {/* ======================
+        Featured products 
+        =======================*/}
+        <div>
+          <h2 className="text-center text-4xl uppercase pt-32 mb-12">
+            Featured Categories
+          </h2>
+          <FeaturedCategories />
+        </div>
       </div>
     </div>
   );
