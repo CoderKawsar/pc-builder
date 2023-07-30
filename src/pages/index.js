@@ -1,6 +1,7 @@
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
 import HeroSection from "@/components/UI/HeroSection";
 import Products from "@/components/UI/Products";
+import SectionTitle from "@/components/UI/SectionTitle";
 import HomePageLayout from "@/components/layouts/HomePageLayout";
 import Head from "next/head";
 
@@ -15,19 +16,15 @@ export default function Home({ featuredProducts }) {
         Featured products 
         =======================*/}
         <div>
-          <h2 className="text-center text-4xl uppercase mb-12">
-            Featured Products
-          </h2>
+          <SectionTitle title="Featured Products" />
           <Products products={featuredProducts} />
         </div>
 
         {/* ======================
         Featured products 
         =======================*/}
-        <div>
-          <h2 className="text-center text-4xl uppercase pt-32 mb-12">
-            Featured Categories
-          </h2>
+        <div className="pt-32">
+          <SectionTitle title="Featured Categories" />
           <FeaturedCategories />
         </div>
       </div>

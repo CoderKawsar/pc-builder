@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Menu() {
   return (
-    <div className="navbar bg-gray-200 h-20 fixed top-0 z-50">
+    <div className="navbar bg-gray-100 h-20 fixed top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

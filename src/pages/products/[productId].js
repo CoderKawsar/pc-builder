@@ -14,7 +14,7 @@ const ProductDetailPage = ({ product }) => {
   } = product;
 
   return (
-    <div className="flex justify-center gap-20 max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-4">
         <img
           src={image}
@@ -23,7 +23,7 @@ const ProductDetailPage = ({ product }) => {
           style={{ height: "500px", width: "700px" }}
         />
       </div>
-      <div>
+      <div className="mt-8">
         <h1 className="text-3xl font-bold">{productName}</h1>
         <p className="text-gray-600 my-2">Category: {category}</p>
         <p className="mb-2">
@@ -54,7 +54,7 @@ const ProductDetailPage = ({ product }) => {
           </p>
         </div>
         <div className="border-gray-200 mt-10">
-          <h2 className="text-xl font-bold mt-4 mb-2 pb-2 border-b-2">
+          <h2 className="text-xl font-bold mt-4 mb-4 pb-2 border-b-2">
             Reviews
           </h2>
           <ul>
