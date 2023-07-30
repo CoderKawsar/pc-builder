@@ -1,5 +1,4 @@
 import FeaturedCategories from "@/components/UI/FeaturedCategories";
-import HeroSection from "@/components/UI/HeroSection";
 import Products from "@/components/UI/Products";
 import SectionTitle from "@/components/UI/SectionTitle";
 import HomePageLayout from "@/components/layouts/HomePageLayout";
