@@ -3,9 +3,13 @@ import SectionTitle from "@/components/UI/SectionTitle";
 import PrivateRoute from "@/components/layouts/PrivateRoute";
 import Head from "next/head";
 import React from "react";
+import { useSelector } from "react-redux";
 
 function BuildPcPage({ categories }) {
-  const handleCompleteBuild = () => {};
+  const { components } = useSelector((state) => state.buildPC);
+  const handleCompleteBuild = () => {
+    alert("success");
+  };
   return (
     <div>
       <Head>
@@ -18,7 +22,9 @@ function BuildPcPage({ categories }) {
           <div className="flex justify-end">
             <button
               onClick={handleCompleteBuild}
-              className="btn btn-primary mt-8"
+              className={`btn btn-primary mt-8 ${
+                components.length < 6 ? "btn-disabled" : ""
+              }`}
             >
               Complete
             </button>
