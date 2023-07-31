@@ -32,7 +32,7 @@ const LoginPage = () => {
             className="btn btn-primary text-white"
             onClick={() => signIn()}
           >
-            <Image src={githubIcon} height={45} width={45} />
+            <Image src={githubIcon} alt="Github" height={45} width={45} />
             Sign in using Github
           </button>
         )}

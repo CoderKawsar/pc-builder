@@ -1,21 +1,23 @@
-import Products from "@/components/UI/Products";
+import ProductsOnBuild from "@/components/UI/ProductsOnBuild";
 import SectionTitle from "@/components/UI/SectionTitle";
+import PrivateRoute from "@/components/layouts/PrivateRoute";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
 
 function Category({ products }) {
   const router = useRouter();
   const category = router.query.category;
 
   return (
-    <div className="mt-32">
-      <Head>
-        <title>Build PC - Category/{category}</title>
-      </Head>
-      <SectionTitle title={category} />
-      <Products products={products} />
-    </div>
+    <PrivateRoute>
+      <div className="mt-32">
+        <Head>
+          <title>Build PC - Category/{category}</title>
+        </Head>
+        <SectionTitle title={category} />
+        <ProductsOnBuild products={products} />
+      </div>
+    </PrivateRoute>
   );
 }
 

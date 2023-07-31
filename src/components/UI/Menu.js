@@ -6,7 +6,7 @@ import Image from "next/image";
 function Menu() {
   const { data: session } = useSession();
   return (
-    <div className="navbar bg-gray-100 h-20 fixed top-0 z-50">
+    <div className="navbar bg-gray-50 shadow h-20 fixed top-0 z-50">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -115,7 +115,7 @@ function Menu() {
           ) : (
             <li>
               <button
-                className="bg-secondary text-white font-semibold"
+                className="bg-gray-600 text-white font-semibold"
                 onClick={() => signOut()}
               >
                 Log Out

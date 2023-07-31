@@ -1,4 +1,5 @@
 import RatingStars from "@/components/UI/RatingStars";
+import Head from "next/head";
 
 const ProductDetailPage = ({ product }) => {
   const {
@@ -15,6 +16,9 @@ const ProductDetailPage = ({ product }) => {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <Head>
+        <title>Build PC - {productName}</title>
+      </Head>
       <div className="mb-4">
         <img
           src={image}
