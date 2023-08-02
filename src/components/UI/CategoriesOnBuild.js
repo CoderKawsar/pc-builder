@@ -3,7 +3,7 @@ import CategoryOnBuild from "./CategoryOnBuild";
 
 function CategoriesOnBuild({ categories }) {
   return (
-    <div className="flex flex-col gap-4 ">
+    <div className="flex flex-col gap-4">
       {categories.map((category) => (
         <CategoryOnBuild
           key={category._id}

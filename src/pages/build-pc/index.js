@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 function BuildPcPage({ categories }) {
   const { components } = useSelector((state) => state.buildPC);
+
   const handleCompleteBuild = () => {
     alert("success");
   };
@@ -36,7 +37,9 @@ function BuildPcPage({ categories }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:5000/api/v1/categories");
+  const res = await fetch(
+    "https://back-end-blue-gamma.vercel.app/api/v1/categories"
+  );
   const categories = await res.json();
 
   return {

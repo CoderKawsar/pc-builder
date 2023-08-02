@@ -7,7 +7,7 @@ function HomePageLayout({ children }) {
     <div>
       <Menu />
       <HeroSection />
-      <main className="my-32 mx-12 min-h-screen">{children}</main>
+      <main className="my-20 md:my-32 mx-12 min-h-screen">{children}</main>
       <Footer />
     </div>
   );

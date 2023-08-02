@@ -85,7 +85,7 @@ const ProductDetailPage = ({ product }) => {
 export async function getStaticProps(context) {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/api/v1/products/${params.productId}`
+    `https://back-end-blue-gamma.vercel.app/api/v1/products/${params.productId}`
   );
   const product = await res.json();
 
@@ -98,7 +98,9 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   // Assuming your API can provide a list of product IDs
-  const res = await fetch("http://localhost:5000/api/v1/products"); // Fetch the list of products from your API
+  const res = await fetch(
+    "https://back-end-blue-gamma.vercel.app/api/v1/products"
+  ); // Fetch the list of products from your API
   const products = await res.json();
 
   // Generate the paths for all products

@@ -6,7 +6,7 @@ function MainLayout({ children }) {
   return (
     <div>
       <Menu />
-      <main className="my-20 mx-12 min-h-screen">{children}</main>
+      <main className="my-20 mx-2 md:mx-12 min-h-screen">{children}</main>
       <Footer />
     </div>
   );

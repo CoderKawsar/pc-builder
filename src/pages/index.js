@@ -4,7 +4,7 @@ import SectionTitle from "@/components/UI/SectionTitle";
 import HomePageLayout from "@/components/layouts/HomePageLayout";
 import Head from "next/head";
 
-export default function Home({ featuredProducts }) {
+export default function Home({ featuredProducts, categories }) {
   return (
     <div>
       <Head>
@@ -22,9 +22,9 @@ export default function Home({ featuredProducts }) {
         {/* ======================
         Featured products 
         =======================*/}
-        <div className="pt-32">
+        <div className="pt-20 md:pt-32">
           <SectionTitle title="Featured Categories" />
-          <FeaturedCategories />
+          <FeaturedCategories categories={categories} />
         </div>
       </div>
     </div>
@@ -36,12 +36,21 @@ Home.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/products/featured");
+  // http://localhost:5000
+  const res = await fetch(
+    "https://back-end-blue-gamma.vercel.app/api/v1/products/featured"
+  );
   const featuredProducts = await res.json();
+
+  const catRes = await fetch(
+    "https://back-end-blue-gamma.vercel.app/api/v1/categories"
+  );
+  const categories = await catRes.json();
 
   return {
     props: {
       featuredProducts: featuredProducts,
+      categories: categories,
     },
     revalidate: 60,
   };

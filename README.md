@@ -1,38 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>PC Builder</h1>
 
-## Getting Started
+### Live Link:
 
-First, run the development server:
+### Application Routes:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Main part
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Auth (User)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/login (POST)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/signup (POST)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/refresh-token (POST)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Auth (Admin)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/create-admin (POST)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/login (POST)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### User
 
-## Learn More
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users (GET)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (Single GET)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (PATCH)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (DELETE)
 
-To learn more about Next.js, take a look at the following resources:
+#### Cows
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows (POST)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows (GET)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (Single GET)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (PATCH)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (DELETE)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Orders
 
-## Deploy on Vercel
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders (POST)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders (GET)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Bonus Part
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#### Admin
+
+-Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/create-admin (POST)
+
+#### My Profile
+
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/my-profile (GET)
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/my-profile (PATCH)
+
+#### Order:
+
+- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders/649a76c24c372dab7d110888 (GET)

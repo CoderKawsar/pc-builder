@@ -24,7 +24,7 @@ function Category({ products }) {
 export async function getStaticProps(context) {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:5000/api/v1/products/categories/${params.category}`
+    `https://back-end-blue-gamma.vercel.app/api/v1/products/categories/${params.category}`
   );
   const products = await res.json();
 
@@ -36,7 +36,9 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost:5000/api/v1/categories");
+  const res = await fetch(
+    "https://back-end-blue-gamma.vercel.app/api/v1/categories"
+  );
   const categories = await res.json();
 
   // Generate the paths for all products
