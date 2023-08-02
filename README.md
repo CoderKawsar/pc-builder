@@ -1,53 +1,25 @@
-<h1>PC Builder</h1>
+# PC Builder
 
-### Live Link:
+## Overview
 
-### Application Routes:
+PC Builder Steel is a web application that allows users to build their custom PC by selecting different PC components from various categories. It is built using React.js and Next.js with authentication implemented using NextAuth.js. The styling is done using Tailwind CSS and DaisyUI, and state management is handled using Redux Toolkit.
 
-## Main part
+## Features
 
-### Auth (User)
+- Homepage with a menu, hero section, featured products, categories, and footer.
+- Category-specific product pages that display products of the selected category.
+- Login page with GitHub authentication for user login.
+- Build PC page (protected route) where logged-in users can select PC components from different categories to build their custom PC. Users are required to select a minimum of 6 category products to complete building the PC.
 
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/login (POST)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/signup (POST)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/auth/refresh-token (POST)
+## Deployment
 
-### Auth (Admin)
+The application is deployed on Vercel and can be accessed at [https://pc-builder-steel.vercel.app/](https://pc-builder-steel.vercel.app/).
 
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/create-admin (POST)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/login (POST)
+## Technologies Used
 
-### User
-
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users (GET)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (Single GET)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (PATCH)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/64985bdfc4f60f73e511fd08 (DELETE)
-
-#### Cows
-
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows (POST)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows (GET)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (Single GET)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (PATCH)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/cows/649a6f72a51825dba7bfc9a1 (DELETE)
-
-#### Orders
-
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders (POST)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders (GET)
-
-## Bonus Part
-
-#### Admin
-
--Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/admins/create-admin (POST)
-
-#### My Profile
-
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/my-profile (GET)
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/users/my-profile (PATCH)
-
-#### Order:
-
-- Route: https://digital-cow-hut-auth-p.vercel.app/api/v1/orders/649a76c24c372dab7d110888 (GET)
+- React.js
+- Next.js
+- Tailwind CSS
+- DaisyUI
+- Redux Toolkit
+- NextAuth.js
